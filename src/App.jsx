@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import './App.css'
 import CadastroForm from "./components/CadastroForm";
 import ContainerCadastrado from "./components/ContainerCadastrado";
 import LoginForm from "./components/LoginForm";
+import { Body } from "./components/stylesGeral";
 import {
   BrowserRouter,
   Routes,
@@ -14,20 +15,27 @@ import {
 
 function App() {
 
-  const users = []
+
 
 
   return (
-    <div className="body">
+    <Body>
+     
 
-<BrowserRouter>
-   <Routes>
-          <Route path="/" element={<LoginForm users={users} />} />
-          <Route path="/cadastro" element={<CadastroForm users={users} />} />
-        </Routes>
-  </BrowserRouter>
 
-    </div>
+        <BrowserRouter>
+
+            <Routes>
+                <Route path="/" element={<LoginForm  />} />
+                <Route path="/cadastro" element={<CadastroForm  />} />
+                <Route path="/main" element={<ContainerCadastrado />}></Route>
+            </Routes>
+
+          </BrowserRouter>
+
+
+      
+     </Body>
   );
 }
 
