@@ -99,6 +99,11 @@ const redefinirSenha = (data) =>{
     return(
     <BodyInitial>
         <Container>
+
+        <Link to='/'>
+                <BotaoRetornar />
+            </Link>
+            
         <LabelContainer>RECUPERAR SENHA</LabelContainer>
 {userValidado === false && 
 
