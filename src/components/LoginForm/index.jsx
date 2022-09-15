@@ -3,10 +3,14 @@ import { Container, InputFormText, LabelForm, BotaoForm, Form, LabelContainer } 
 import { IconLinkedin, ParagrafoForm, ContainerRedes, IconWhatsApp, IconGitHub } from "./styles";
 import { Link, useNavigate} from "react-router-dom";
 import { BodyInitial } from "../stylesGeral";
+import {toast, ToastContainer
+} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function LoginForm(props){
 
 const Navigate = useNavigate()
+
 
 
 useEffect(()=>{
@@ -65,10 +69,12 @@ const pegaInputs = (e) =>{
 
             sessionStorage.setItem('userAtual', JSON.stringify(user));
             atribuiToken()
+        }else{
+            toast.error('Senha incorreta')
         }
 
     }else{
-        console.log('Não conectou')
+        toast.error('Usuário desconhecido')
     }
 
 }
@@ -118,6 +124,7 @@ const pegaInputs = (e) =>{
 
 
         </Container>
+        <ToastContainer />
     </BodyInitial>
     )
 }
