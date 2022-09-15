@@ -119,7 +119,7 @@ const redefinirSenha = (data) =>{
 
 <LabelForm htmlFor="password"> Digite seu Email </LabelForm>
 
-<InputFormText type='email' id="email" name="email"/>
+<InputFormText type='text' id="email" name="email"/>
 
 
 
