@@ -90,7 +90,7 @@ const pegaInputs = (e) =>{
 
             <Form onSubmit={(e)=>pegaInputs(e)} >
                     
-                <LabelForm htmlFor="user"> Usuário</LabelForm>
+                <LabelForm htmlFor="user"> Usuário </LabelForm>
 
                 <InputFormText type='text' id="user" name="user" autoComplete="off"/>
 
@@ -105,9 +105,9 @@ const pegaInputs = (e) =>{
                 <BotaoForm type='submit'> Entrar </BotaoForm>
 
             </Form>
-
+                 <Link to='/redefinirSenha'>
                 <ParagrafoForm>Esqueceu sua senha?</ParagrafoForm>
-
+                </Link>
                 <Link to='/cadastro'>
                 <ParagrafoForm>Não tem uma conta?</ParagrafoForm>
                 </Link>
