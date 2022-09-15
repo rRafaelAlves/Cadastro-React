@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
-import { Container, InputFormText, LabelForm, BotaoForm, Form, LabelContainer } from "../stylesGeral";
-import { useNavigate} from "react-router-dom";
+import { Container, InputFormText, LabelForm, BotaoForm, Form, LabelContainer, BotaoRetornar } from "../stylesGeral";
+import {Link, useNavigate} from "react-router-dom";
 import { BodyInitial } from "../stylesGeral";
 import {toast, ToastContainer
 } from 'react-toastify'
@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup'
 import { MessageError } from "../stylesGeral";
+
 
 export default function RecuperarSenha(props){
 
@@ -103,7 +104,7 @@ const redefinirSenha = (data) =>{
         <Link to='/'>
                 <BotaoRetornar />
             </Link>
-            
+
         <LabelContainer>RECUPERAR SENHA</LabelContainer>
 {userValidado === false && 
 
